@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 style="text-align:center; margin-bottom:30px;">📊 Dashboard</h2>
+
+<div style="display:flex; justify-content:space-around; flex-wrap:wrap; gap:20px;">
+
+    <div style="background:white; padding:20px; border-radius:15px; width:200px; text-align:center; box-shadow:0 5px 15px rgba(0,0,0,0.2);">
+        <h3>Total</h3>
+        <h1>{{ total }}</h1>
+    </div>
+
+    <div style="background:#d4edda; padding:20px; border-radius:15px; width:200px; text-align:center; box-shadow:0 5px 15px rgba(0,0,0,0.2);">
+        <h3>Done</h3>
+        <h1>{{ done }}</h1>
+    </div>
+
+    <div style="background:#fff3cd; padding:20px; border-radius:15px; width:200px; text-align:center; box-shadow:0 5px 15px rgba(0,0,0,0.2);">
+        <h3>Active</h3>
+        <h1>{{ active }}</h1>
+    </div>
+
+</div>
+
+{% endblock %}

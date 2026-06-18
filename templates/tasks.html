@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 style="text-align:center; margin-bottom:20px;">📋 Tasks</h2>
+
+<form action="/add" method="post" style="display:flex; gap:10px; margin-bottom:20px;">
+    <input name="title" class="form-control" placeholder="Enter task">
+    <button class="btn btn-primary">Add</button>
+</form>
+
+<div class="row">
+
+    {% for task in tasks %}
+    <div class="col-md-4 mb-3">
+
+        <div style="background:white; padding:15px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.2);">
+
+            <h5>
+                {% if task.status == "done" %}
+                    <del>{{ task.title }}</del>
+                {% else %}
+                    {{ task.title }}
+                {% endif %}
+            </h5>
+
+            <div style="display:flex; gap:10px; margin-top:10px;">
+
+                <a href="/done/{{ task.id }}" class="btn btn-success btn-sm" onclick="showToast('Task done!')">Done</a>
+                <a href="/delete/{{ task.id }}" class="btn btn-danger btn-sm" onclick="showToast('Task deleted!')">Delete</a>
+
+            </div>
+
+        </div>
+
+    </div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

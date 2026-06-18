@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div style="text-align:center; padding:80px 20px;">
+
+    <h1 style="font-size:50px; font-weight:bold;">
+        🚀 AITU Web Project
+    </h1>
+
+    <p style="font-size:20px; color:#444; margin-top:15px;">
+        Simple Task Manager + Dashboard + Gallery + Contact System
+    </p>
+
+    <div style="margin-top:30px;">
+        <a href="/tasks" class="btn btn-primary btn-lg" style="margin:5px;">Go Tasks</a>
+        <a href="/dashboard" class="btn btn-success btn-lg" style="margin:5px;">Dashboard</a>
+        <a href="/gallery" class="btn btn-dark btn-lg" style="margin:5px;">Gallery</a>
+    </div>
+
+</div>
+
+<hr>
+
+<div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px;">
+
+    <div style="background:white; padding:20px; border-radius:15px; width:250px; box-shadow:0 5px 15px rgba(0,0,0,0.2); text-align:center;">
+        <h3>⚡ Fast Tasks</h3>
+        <p>Manage your tasks easily with CRUD system.</p>
+    </div>
+
+    <div style="background:white; padding:20px; border-radius:15px; width:250px; box-shadow:0 5px 15px rgba(0,0,0,0.2); text-align:center;">
+        <h3>📊 Dashboard</h3>
+        <p>See statistics of completed and active tasks.</p>
+    </div>
+
+    <div style="background:white; padding:20px; border-radius:15px; width:250px; box-shadow:0 5px 15px rgba(0,0,0,0.2); text-align:center;">
+        <h3>🖼️ Gallery</h3>
+        <p>Beautiful image gallery with modern UI.</p>
+    </div>
+
+</div>
+
+{% endblock %}

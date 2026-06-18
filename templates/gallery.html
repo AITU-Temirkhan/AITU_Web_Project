@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 style="text-align:center; margin-bottom:25px;">🖼️ Modern Gallery</h2>
+
+<style>
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition: 0.4s;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+}
+</style>
+
+<div class="gallery">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+        <div class="overlay">Technology</div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5">
+        <div class="overlay">Coding</div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+        <div class="overlay">Development</div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+        <div class="overlay">AI Systems</div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b">
+        <div class="overlay">Data Science</div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+        <div class="overlay">Innovation</div>
+    </div>
+
+</div>
+
+{% endblock %}

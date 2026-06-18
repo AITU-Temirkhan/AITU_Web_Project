@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 style="text-align:center; margin-bottom:25px;">📞 Contact Us</h2>
+
+<div style="max-width:600px; margin:auto; background:white; padding:25px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.2);">
+
+    <form>
+
+        <label>Name</label>
+        <input type="text" class="form-control mb-3" placeholder="Enter your name">
+
+        <label>Email</label>
+        <input type="email" class="form-control mb-3" placeholder="Enter your email">
+
+        <label>Message</label>
+        <textarea class="form-control mb-3" rows="5" placeholder="Write your message"></textarea>
+
+        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+
+    </form>
+
+</div>
+
+{% endblock %}
